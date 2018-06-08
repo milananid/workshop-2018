@@ -161,12 +161,26 @@ textarea {
     .btn.transform:hover:after {
         transform: scaleY(1);
     }
-
-    .btn.transform.double {
-        
+    .btn.transform.ltr {}
+    .btn.transform.ltr:after {
+        transform-origin: 0% 50%;
+        transform: scaleX(0);
     }
-    .btn.transform.double:before {
-        content: '';
+    .btn.transform.ltr:hover:after {
+        transform: scaleX(1);
+    }
+
+    .btn.transform.double { 
+       /* overflow: hidden; */
+    }
+    .btn.transform.double:before { }
+    .btn.transform.double:after {
+        z-index: 1;
+        content: 'Scopri';
+        text-align: center;
+        padding-top: 11px;
+        height: 100%;
+        height: calc(100% - 11px);
     }
 
     .iphone.highresolution .stdBtn {
